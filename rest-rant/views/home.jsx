@@ -7,8 +7,9 @@ const Home = () => {
       <main>
         <h1>HOME</h1>
         <div>
-          <img alt="Placeholder image" />
+          <img src="/Images/steak-and-fries" alt="steak with fries" />
         </div>
+        Photo by <a href='https://unsplash.com/@covertnine'>Tim Toomey</a>  on <a href='https://unsplash.com/photos/grilled-meat-on-white-ceramic-plate-pe9dvM1rQkM'>Unsplash</a>
         <a href='/places'>
           <button className='btn btn-primary'>Places Page</button>
         </a>

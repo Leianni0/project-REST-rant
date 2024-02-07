@@ -8,8 +8,8 @@ const PageNotFund = () => {
       <h1>404: PAGE NOT FOUND</h1>
       <p>Oops, sorry, we can't find this page!</p>
       <img 
-      src=''
-      alt=''
+      src='/Images/cute-fox.jpg'
+      alt='white fox by Jonatan Pie on Unsplash.com'
       />
       </main>
   </def>
