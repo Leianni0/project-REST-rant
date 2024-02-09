@@ -1,11 +1,13 @@
 require('dotenv').config();
 const express = require('express');
 const app = express();
-const Render = require()
+const Render = require('./render');
+const methodOverride = require('method-override');
 
 //Middle ware
 app.use(express.static('public'));
-app.use(express.urlencoded({extended: true}));
+app.use(express.urlencoded({ extended: true }));
+app.use(methodOverride('_method'));
 
 app.set('view engine', 'jsx');
 app.engine('jsx', require('express-react-views').createEngine());
