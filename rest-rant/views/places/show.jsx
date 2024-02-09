@@ -12,20 +12,30 @@ const show = (data) => {
     });
     return (
         <default>
-            <main className='container'>
-                <div className='row'>
-
+             <main className='container'>
+                <div className='row align-items-start'>
+                    <div className='col'>
+                        <img src={place.pic} alt={place.name} />
+                    </div>
+                    <div className='col'>
+                        <h1>{place.name}</h1>
+                        <p>
+                            Located at: {place.city}, {place.state}
+                        </p>
+                        <p>{cuisinesBadges}</p>
+                    </div>
                 </div>
-                <div className='col'></div>
-                
-                <h1>{data.place.name}</h1>
                 <div className='row align-items-center'>
-                    <a href='' className='btn btn-warning'>
-                        Edit
+                    <div className='col'>
+                        <a href={`/places/${id}/edit`} className='btn btn-warning'>
+                            Edit
                         </a>
-                    <form action='?_method=DELETE at 9:01' method='POST'>
-                    <button type='submit' className='btn btn-danger'> Delete </button>
-                    </form>
+                        <form action={`/places/${id}?_method=DELETE`} method='POST'>
+                            <button type='submit' className='btn btn-danger'>
+                                Delete
+                            </button>
+                        </form>
+                    </div>
                 </div>
             </main>
         </default>
