@@ -42,7 +42,19 @@ router.post('/', (req, res) => {
 });
 
 // Delete a Place
-
+router.delete('/:id', (req, res) => {
+    const id = Number(req.params.id);
+    if (isNaN(id)) {
+    
+        res.status(400).send(render('Error404'));
+    } else if (!places[id]) {
+        
+        res.status(400).send(render('Error404'));
+    } else {
+        places.splice(id, 1);
+        res.redirect('/places');
+    }
+});
 
 module.exports = router;
 
