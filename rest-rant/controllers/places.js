@@ -41,6 +41,21 @@ router.post('/', (req, res) => {
     res.redirect('/places');
 });
 
+// Edit Route
+router.get('/:id/edit', (req, res) => {
+    let id = Number(req.params.id)
+    if (isNaN(id)) {
+        res.render('error404')
+    }
+    else if (!places[id]) {
+        res.render('error404')
+    }
+    else {
+      res.render('places/edit', { place: places[id] })
+    }
+  })
+  
+
 // Delete a Place
 router.delete('/:id', (req, res) => {
     const id = Number(req.params.id);

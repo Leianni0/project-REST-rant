@@ -1,15 +1,20 @@
-const React = require('react');
-const Def = require('../layouts/default.jsx');
+const React = require('react')
+const Def = require('../default.jsx')
 
-const New = () => {
+function edit_form (data) {
     return (
         <Def>
-            <main>
-                <h1>Add a New Place</h1>
+          <h1>Add a New Place</h1>
                 <form action='/places' method='POST'>
                     <div className='mb-3'>
                         <label htmlFor='name'>Place Name</label>
-                        <input type='text' name='name' id='name' className='form-control' />
+                        <input 
+                        type='text' 
+                        name='name' 
+                        id='name' 
+                        value={data.place.name} 
+                        className='form-control'
+                        required />
                     </div>
 
                     <div className='mb-3'>
@@ -40,9 +45,8 @@ const New = () => {
                         </button>
                     </div>
                 </form>
-            </main>
         </Def>
-    );
-};
+    )
+}
 
-module.exports = New;
+module.exports = edit_form
