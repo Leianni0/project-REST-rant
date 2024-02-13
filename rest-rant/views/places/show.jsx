@@ -1,5 +1,5 @@
 const React = require('react');
-const Def = require ('/..layouts/default');
+const Def = require ('/.layouts/default');
 //Look at instrctor code
 const show = (data) => {
 

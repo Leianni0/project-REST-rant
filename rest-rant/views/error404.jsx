@@ -1,5 +1,5 @@
 const React = require('react')
-const Def = require('../layouts/default');
+const Def = require('./layouts/default');
 
 const PageNotFund = () => {
   return (

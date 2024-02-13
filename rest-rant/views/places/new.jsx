@@ -1,5 +1,5 @@
 const React = require('react');
-const Def = require('../layouts/default.jsx');
+const Def = require('./layouts/default.jsx');
 
 const New = () => {
     return (
